@@ -45,12 +45,12 @@
 
 html,
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-items: center;
   font-weight: var(--font-family);
   background: rgb(207,211,213);
-background: radial-gradient(circle, rgba(207,211,213,1) 40%, rgba(38,133,241,1) 78%, rgba(140,191,252,1) 97%);
+  background: radial-gradient(circle, rgba(207,211,213,1) 40%, rgba(38,133,241,1) 78%, rgba(140,191,252,1) 97%);
 }
 
 .calendar {
@@ -62,6 +62,7 @@ background: radial-gradient(circle, rgba(207,211,213,1) 40%, rgba(38,133,241,1) 
   position: relative;
   overflow: hidden;
   transform: scale(1.20);
+  
 }
 
 .light .calendar {
@@ -314,4 +315,25 @@ background: radial-gradient(circle, rgba(207,211,213,1) 40%, rgba(38,133,241,1) 
       transform: translateY(0);
       opacity: 1;
   }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .calendar {
+    width: 280px;
+    height: 345px;
+  }
+  body {
+    width: 280px;
+    height: 290px;
+  }
+  .calendar-header {
+    font-size: 20px;
+  }
+  .calendar-days div {
+    width: 12%;
+    height: 25%;
+  }
+
+ 
 }

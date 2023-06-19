@@ -315,3 +315,23 @@ background: radial-gradient(circle, rgba(207,211,213,1) 40%, rgba(38,133,241,1) 
       opacity: 1;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .calendar {
+    width: 280px;
+    height: 345px;
+  }
+  body {
+    width: 280px;
+    height: 290px;
+  }
+  .calendar-header {
+    font-size: 20px;
+  }
+  .calendar-days div {
+    width: 12%;
+    height: 25%;
+  }
+
+ 
+}

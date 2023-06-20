@@ -7,7 +7,7 @@
 
   --light-body: #b4d1f3;
   --light-main: #f2efef;
-  --light-second: #4c4c5c;
+  --light-second: #2e2e3b;
   --light-hover: #d0dbef;
   --light-text: #0a0912;
 
@@ -322,6 +322,7 @@ body {
   .calendar {
     width: 280px;
     height: 345px;
+    padding-right: 20px;
   }
   body {
     width: 280px;
@@ -335,5 +336,24 @@ body {
     height: 25%;
   }
 
- 
+ .toggle {
+  padding-bottom: 8px;
+ }
+ .calendar-week-day {
+  font-weight: 400;
+  grid-column-end: auto;
+  column-gap: 0.3em;
+  margin-right: 2.5em;
+ }
+ .month-list > div > div {
+  padding: 10px 5px;
+ }
+ .calendar-days div.curr-date {
+  width: 65%;
+  height: 60%;
+}
+.calendar-days div span {
+  display: none;
+}
+
 }

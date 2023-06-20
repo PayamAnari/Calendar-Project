@@ -7,7 +7,7 @@
 
   --light-body: #b4d1f3;
   --light-main: #f2efef;
-  --light-second: #4c4c5c;
+  --light-second: #2e2e3b;
   --light-hover: #d0dbef;
   --light-text: #0a0912;
 
@@ -45,12 +45,12 @@
 
 html,
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-items: center;
   font-weight: var(--font-family);
   background: rgb(207,211,213);
-background: radial-gradient(circle, rgba(207,211,213,1) 40%, rgba(38,133,241,1) 78%, rgba(140,191,252,1) 97%);
+  background: radial-gradient(circle, rgba(207,211,213,1) 40%, rgba(38,133,241,1) 78%, rgba(140,191,252,1) 97%);
 }
 
 .calendar {
@@ -62,6 +62,7 @@ background: radial-gradient(circle, rgba(207,211,213,1) 40%, rgba(38,133,241,1) 
   position: relative;
   overflow: hidden;
   transform: scale(1.20);
+  
 }
 
 .light .calendar {
@@ -316,10 +317,12 @@ background: radial-gradient(circle, rgba(207,211,213,1) 40%, rgba(38,133,241,1) 
   }
 }
 
+
 @media only screen and (max-width: 768px) {
   .calendar {
     width: 280px;
     height: 345px;
+    padding-right: 20px;
   }
   body {
     width: 280px;
@@ -333,5 +336,25 @@ background: radial-gradient(circle, rgba(207,211,213,1) 40%, rgba(38,133,241,1) 
     height: 25%;
   }
 
- 
+ .toggle {
+  padding-bottom: 8px;
+ }
+ .calendar-week-day {
+  font-weight: 400;
+  grid-column-end: auto;
+  column-gap: 0.3em;
+  margin-right: 2.5em;
+ }
+ .month-list > div > div {
+  padding: 10px 5px;
+ }
+ .calendar-days div.curr-date {
+  width: 65%;
+  height: 60%;
 }
+.calendar-days div span {
+  display: none;
+}
+
+}
+ 
